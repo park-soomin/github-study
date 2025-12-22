@@ -1,0 +1,28 @@
+- 1강
+    - git 사용 이유
+        파일 내용 보존 및 관리
+
+    - git 유저 이름 세팅
+        git config --global user.email "soomini030113@gmail.com"
+        git config --global user.name "박수민"
+
+
+- 2강
+    - git에 저장
+        command + s                 // 저장
+        git add 파일명                // staging
+        git commit -m '아무메세지'     // repository에 저장
+
+    - 다른 기능들
+        git add 파일명1 파일명2     // 동시에 여러개 staging
+        git add .                // 모든 파일 전부 staging
+        git status               // 변경된 파일, staging된 파일 모두 알려줌(상태창)
+        git log --all --oneline  // commit 기록 보여줌
+
+    - commit은 언제?
+        간단한 기능 추가할 때마다 하는 것이 best
+
+
+- 3강
+    - commit을 더 쉽게
+        왼쪽

@@ -25,4 +25,19 @@
 
 - 3강
     - commit을 더 쉽게
-        왼쪽
+        왼쪽 git처럼 생긴 메뉴로 들어가기
+        변경사항 생기면 옆에 자동으로 뜸
+        + 누르면 add
+        체크마크 누르면 git commit
+        (파일 많고 복잡하면 이 방법이 편함)
+
+    - git diff 
+        바로 전 commit과 현재 코드 차이점 비교해 줌
+        
+        - 부가 기능
+            git diff 커밋id                // 과거의 특정 commit과 현재 파일 비교
+            git diff 커밋id1 커밋id2        // 과거의 특정 commit 2개 차이점 비교
+            git difftool                  // 비주얼적으로 좋음
+            git graph와 같은 부가기능 사용하면 더 편리함
+
+    

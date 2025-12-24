@@ -42,6 +42,31 @@
 
 
 - 4강
+    - branch
+        프로젝트의 복사본 만들어서 branch에 먼저 개발
+
+    - branch 생성
+        - git branch 브랜치이름
+            프로젝트 사본 생성
+        
+        - git switch 브랜치이름
+            git branch로 만든 브랜치로 이동
+            이동하면 여기서 개발 및 commit 마음대로 할 수 있음
+        
+        - git log --graph --oneline --all
+            branch와 commit 내역을 한눈에 그래프로 볼 수 있음
+
+        - 브랜치 병합
+            git switch main
+            git merge 브랜치이름
+
+        - branch conflict
+            master 브랜치와 새로운 branch에서 같은 파일과 같은 줄 수정하면 merge conflict 발생
+            어떤 파일 남길지 결정했으면
+            git add 파일명
+            git commit -m '메세지'
+
+
 
 
     

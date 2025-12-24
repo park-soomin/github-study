@@ -67,6 +67,39 @@
             git commit -m '메세지'
 
 
+- 5강
+    - 3-way merge
+        merge 명령을 내리면 두 브랜치의 코드르 합쳐서 새로운 commit 자동 생성
+        merge의 기본 동작 방식
 
+    - fast-forward merge
+        새로운 브랜치에만 commit, 기준 브랜치에는 신규 commit X
+        딱히 합칠게 없으니 신규 브랜치한테 "지금부터 니 이름은 main 브랜치여" 하는 것
 
-    
+    - 브랜치 삭제
+        git branch -d 브랜치이름    // 병합이 완료된 브랜치 삭제시
+        git branch -D 브랜치이름    // 병합하진 않은 브랜치 삭제시
+
+    - rebase and merge
+        - rebase
+            브랜치의 시작점을 다른 commit으로 옮겨주는 행위
+        
+        1. rebase를 이용하여 신규 브랜치의 시작점을 main 브랜치 최근 commit으로 옮김
+        2. fast-forward merge 하는 것
+
+        git switch 새로운브랜치
+        git rebase main
+        git switch main
+        git merge 새로운브랜치
+
+    - squash and merge
+        - 사용 이유
+            모든 브랜치를 3-way merge하면 브랜치가 많아졌을 때 로그가 매우 복잡해보임
+            3-way merge된 브랜치들의 commit 내역도 다 같이 출력되어 더러워짐
+
+        - 동작 방식
+            새로운 브랜치에 있던 commit들 연결이 아닌, 똑 떼와서 main 브랜치에 붙임 (텔레포트)
+
+            git switch main
+            git merge --squash 브랜치이름
+            git commit -m '메세지'

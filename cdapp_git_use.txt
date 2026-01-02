@@ -93,6 +93,7 @@
         git merge 새로운브랜치
 
     - squash and merge
+
         - 사용 이유
             모든 브랜치를 3-way merge하면 브랜치가 많아졌을 때 로그가 매우 복잡해보임
             3-way merge된 브랜치들의 commit 내역도 다 같이 출력되어 더러워짐
@@ -103,3 +104,30 @@
             git switch main
             git merge --squash 브랜치이름
             git commit -m '메세지'
+
+
+- 6강
+    - git restore
+        - git restore 파일명
+            최근 commit된 상태로 돌릴 수 있음
+        - git restore --source 커밋아이디 파일명
+            입력된 파일이 특정 커밋아이디 시점으로 돌아감
+        - git restore --staged 파일명
+            특정 파일 staging 취소
+
+    - git revert
+        - git revert 커밋아이디
+            그 커밋아이디에서 일어난 일만 취소
+            실행 시 에디터에 커밋메세지 수정 후 닫기
+        
+    - git reset
+        - git reset --hard 커밋아이디
+            그 커밋 생성될때의 시간으로 돌려줌
+            프로젝트 망하거나 짧은 거리 되돌아갈때만 사용
+        - git reset --soft 커밋아이디
+            커밋아이디가 staging area에 남아있음
+        - git reset --mixed 커밋아이디
+            커밋아이디가 staging 되지 않은 상태
+            git add, commit 할 수 있음
+
+

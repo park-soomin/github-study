@@ -152,3 +152,19 @@
         git clone 원격저장소주소
 
 
+- 8강
+    - 협업
+        git clone 원격저장소주소
+        이러면 원격저장소에 있는 소스코드가 그대로 내려받아짐
+        팀원이 git push 하려면 setting -> collaborators에 등록되어 있어야 함
+
+        - 문제 발생
+            갑자기 다른 놈이 만든 파일이 원격저장소에 생기면 git push 못함
+            원격저장소가 타인에 의해 업데이트가 되면 git pull 원격저장소주소 하고 그대로 git push 하면 됨
+
+    - (참고)
+        git pull은 git fetch + git merge임
+        git fetch는 원격저장소에 있는 commit중에 로컬이 없는 신규 commit 가져오라는 명령어
+        git merge는 그걸 merge하라는 명령어
+        git pull 할 때 2명이 같은 파일 건드리면 merge conflict 날 수 있음
+

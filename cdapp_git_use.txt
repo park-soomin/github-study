@@ -225,6 +225,20 @@
 
 
 - 11강
+    - git stash
+        방금 짠 코드가 맘에 안듦
+        잠깐 삭제하고 싶을 때 사용
 
+    - git stash save 메시지
+        메모도 함께 입력 가능
 
+    - git stash list
+        현재 stash 되어있는 코드목록 전부 출력
 
+    - git stash pop
+        잠깐 보관했던 코드를 다시 불러옴
+        여러개 보관해놨으면 가장 최근 것부터 불러옴
+
+    - 주석처리와 다른점
+        주석은 commit할 때 반영됨
+        주석처리한 내용을 commit 하기 싫을 때 git stash 사용
